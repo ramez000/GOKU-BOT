@@ -1,8 +1,8 @@
 const handler = async (m, { conn, text, bot }) => {
   if (!m.isOwner) {
     const ownerJid = bot?.config?.owners[0]?.jid
-    m.reply("` • تم ارسال طلبك لـ المطور • `")
-    await conn.sendMessage(ownerJid, { text: `🔔 *طلب دخول جروب*\nمن: @${m.sender.split("@")[0]}\nالرابط: ${text || "لم يرسل رابط"}`, mentions: [m.sender] });
+    m.reply("` • تم ارسال طلبك للمطور • `")
+    await conn.sendMessage(ownerJid, { text: `🔔 *طلب دخول مجموعة*\nمن: @${m.sender.split("@")[0]}\nالرابط: ${text || "لم يرسل رابط"}`, mentions: [m.sender] });
     return m.reply("✅ تم إرسال طلبك للمطور");
   }
 
