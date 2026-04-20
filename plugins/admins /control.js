@@ -33,7 +33,7 @@ let control = async (m, { command, text, conn, bot, participants }) => {
             if (!user) return m.reply("❌ منشن أو رد على العضو");
             
             if (isBotOwner(user) || user === conn.user.id) {
-                m.reply("بتهزر ؟");
+                m.reply("*بتمزح ؟*");
                 return await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove');
             }
             
