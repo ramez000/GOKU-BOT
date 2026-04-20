@@ -12,7 +12,7 @@
   "license": "MIT",
   "dependencies": {
     "Kintoun": "https://github.com/ramez000/kn/tarball/main",
-    "sharp": "https://github.com/ramez000/sharp-tmx/tarball/main",
+    "sharp": "https://github.com/deveni0/sharp-tmx/tarball/main",
     "cheerio": "1.0.0-rc.12",
     "chokidar": "^5.0.0",
     "file-type": "^18.0.0",
@@ -21,9 +21,9 @@
     "wa-sticker-formatter": "^4.3.2"
   },
   "overrides": {
-    "sharp": "https://github.com/ramez000/sharp-tmx/tarball/main",
+    "sharp": "https://github.com/deveni0/sharp-tmx/tarball/main",
     "*": {
-      "sharp": "https://github.com/ramez000/sharp-tmx/tarball/main"
+      "sharp": "https://github.com/deveni0/sharp-tmx/tarball/main"
     }
   }
 }
