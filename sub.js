@@ -1,4 +1,4 @@
-import { SubBots } from "meowsab";
+import { SubBots } from "Kintoun";
 
 async function sub(client) {
 
