@@ -1,5 +1,5 @@
 const handler = async (m, { conn, text }) => {
-  m.reply("*اسفه مضطرة اخرج عشان مطوري اشوفكم بعدين ⁦(⁠ ⁠ꈍ⁠ᴗ⁠ꈍ⁠)⁩💙❤️*")
+  m.reply("*اسف مضطرة اخرج عشان مطوري اشوفكم بعدين ⁦🐉💖*")
   conn.groupLeave(m.chat)
 };
 
