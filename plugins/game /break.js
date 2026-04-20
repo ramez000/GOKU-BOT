@@ -41,7 +41,7 @@ handler.before = async (m, { conn }) => {
         return;
     }
 
-    await m.reply(`✅ احسنت معاك: ${global.break.scores[m.chat][player]} نقطه`);
+    await m.reply(`✅ احسنت حصلت على: ${global.break.scores[m.chat][player]} نقطه`);
     handler(m, { conn });
 };
 
@@ -60,7 +60,7 @@ async function handler(m, { conn }) {
 ╭─┈─┈─┈─⟞🔨⟝─┈─┈─┈─╮
 ┃ *⌯︙ ${q.question}*
 ╰─┈─┈─┈─⟞⚙️⟝─┈─┈─┈─╯
-> _*اكتب الكلام بسرعه عشان تتحسبلك نقطه + بعد ٣٠ ثانيه لو مردتش اللعبه هتنتهي*_`);
+> _*أكتب الكلمة أعلاه مفككة بمسافات بين الحروف + سيتم إنهاء اللعبة بعد ٣٠ ثانية*_`);
     
     if (!global.break.scores[m.chat]) global.break.scores[m.chat] = {};
     
