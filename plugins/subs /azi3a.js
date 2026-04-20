@@ -8,7 +8,7 @@ const run = async (m, { conn, bot }) => {
   const bots = sub.list();
   const activeBots = bots.filter(b => b.connected && b.phone && b.id !== bot.id);
   
-  if (activeBots.length === 0) return m.reply("📭 لا يوجد بوتات فرعية متصلة للإذاعة");
+  if (activeBots.length === 0) return m.reply("📭 لا توجد بوتات فرعية متصلة للإذاعة");
   
   let success = 0;
   let fail = 0;
@@ -47,12 +47,12 @@ const run = async (m, { conn, bot }) => {
   
   await m.reply(`✅⤿ تـم الـإذاعـه 𑁍
 ⊱⋅ ──────────── ⋅⊰
-✓🌹 الـنـجـاح: ${success}
-✓🫒 فـشـل: ${fail}
-✓🌹 الـبـوتـات: ${activeBots.length}
-✓🫒 الـجـروبـات: ${groupCount}
+✓✅ الـنـجـاح: ${success}
+✓❌ فـشـل: ${fail}
+✓🤖 الـبـوتـات: ${activeBots.length}
+✓👥 الـمـجـمـوعـات: ${groupCount}
 ⊱⋅ ──────────── ⋅⊰
-> *_VII7 SubBot System_*`);
+> *_𝐆𝐎𝐊𝐔🐉 SubBot System_*`);
 };
 
 run.command = ["اذاعة_فرعي", "اذاعه_فرعي"];
