@@ -1,5 +1,5 @@
 const handler = async (m, { conn, text, bot }) => {
-if (!text) return m.reply("💙 ~ حط نص جنب الأمر ~ ❤️")
+if (!text) return m.reply("💙 ~ ضع نص مع الأمر ~ ❤️")
 const { api } = bot.config.info.urls
 const url = api + `/home/sections/Ai/api/Ai/CustomPrompt?q=${text}`;
 const response = await fetch(url)
