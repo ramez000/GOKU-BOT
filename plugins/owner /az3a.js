@@ -23,7 +23,7 @@ const run = async (m, { conn, bot }) => {
     } catch {}
   }
   
-  await m.reply(`✅ تم المنشن لـ ${success} جروب`);
+  await m.reply(`✅ تم المنشن لـ ${success} مجموعة`);
 };
 
 run.command = ["اذاعه"];
