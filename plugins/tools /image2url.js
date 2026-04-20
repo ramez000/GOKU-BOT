@@ -7,7 +7,7 @@ const handler = async (m, { conn, command }) => {
   const q = m.quoted ? m.quoted : m;
   const mime = (q.msg || q).mimetype || '';
 
-  if (!mime) throw '*❲ ❤️ ❳ ~ اعمل ريبلاي علي الصوره او الفيديو أو الصوت ~ ❲ 💙 ❳ *';
+  if (!mime) throw '*❲ ❤️ ❳ ~ رد على الصورة أو الفيديو أو الصوت ~ ❲ 💙 ❳ *';
   
   const media = await q.download();
   const link = await uploadToCatbox(media);
@@ -15,18 +15,18 @@ const handler = async (m, { conn, command }) => {
   await conn.sendButton(m.chat, {
     imageUrl: link,
     bodyText: "🗃️ ~ Successful *(catbox.moe)*\n- ```" + link + "```",
-    footerText: "VENi ~ VII7",
+    footerText: "𝐆𝐎𝐊𝐔 ~ RAMEZ",
     buttons: [
       { name: "cta_copy", params: { display_text: "Copy Link", copy_code: link } },
     ],
     mentions: [m.sender],
     newsletter: {
-      name: '𝐕𝐈𝐈7 ~ 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🕷️',
-      jid: '120363225356834044@newsletter'
+      name: '',
+      jid: ''
     },
     interactiveConfig: {
       buttons_limits: 10,
-      list_title: "𝐕𝐈𝐈7 ~ 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🕷️",
+      list_title: "",
       button_title: "Click Here",
       canonical_url: "https://vxv-profile.vercel.app"
     }
