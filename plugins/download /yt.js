@@ -1,10 +1,10 @@
-import { Scrapy } from "meowsab";
+import { Scrapy } from "Kintoun";
 
 const handler = async (m, { conn, command, text }) => {
-  if (!text) throw '*❲ ❤️ ❳ ~ حط رابط جنب الامر ~ ❲ 💙 ❳ *';
+  if (!text) throw '*❲ ❤️ ❳ ~ ضع رابط مع الأمر ~ ❲ 💙 ❳ *';
   
   if (!text.match(/youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/shorts\//)) {
-    throw '*❌ ~ الرابط مش صحيح ~ حط رابط يوتيوب صحيح*';
+    throw '*❌ ~ الرابط ليس صحيحاً ~ ضع رابط يوتيوب صحيح*';
   }
   
   const isAudio = command === "يوت_اغنيه" || command === "ytmp3";
@@ -28,8 +28,8 @@ const handler = async (m, { conn, command, text }) => {
       isForwarded: true,
       forwardingScore: 1,
       forwardedNewsletterMessageInfo: {
-        newsletterJid: '120363225356834044@newsletter',
-        newsletterName: '𝐕𝐈𝐈7 ~ 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🕷️',
+        newsletterJid: '',
+        newsletterName: '',
         serverMessageId: 0
       },
       externalAdReply: {
