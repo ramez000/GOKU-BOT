@@ -6,7 +6,7 @@ import { uploadToCatbox } from "../../system/utils.js";
 let handler = async (m, { conn, bot, text }) => {
   try {
     if (!m.quoted?.mimetype) return m.reply("*❌ ~ رد علي الصوره اولاً ~*");
-    if (!m.quoted.mimetype.startsWith('image/')) return m.reply("*❌ ~ ده مش ملف صوره ~*");
+    if (!m.quoted.mimetype.startsWith('image/')) return m.reply("*❌ ~ هذا ليس ملف صورة ~*");
     if (!text) return m.reply("*💬 ~ اكتب التعديل المطلوب ~*");
     
     m.react("⚡");
