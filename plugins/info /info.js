@@ -26,10 +26,10 @@ const handler = async (m, { conn, bot, config }) => {
   const subConnected = subBots?.list().filter(b => b.connected).length || 0;
   
   const msg = `
-——> *الـبـوت 🎪*
+——> *الـبـوت 🤖*
 - *الاسم:* \`${conn.user.name || bot.config.info.nameBot || "User"}\`
 - *الرقم:* \`wa.me/+${conn.user.id.split(':')[0]}\`
-- *شغال منذ:* \`${uptimeHours.toString().padStart(2, '0')}:${uptimeMins.toString().padStart(2, '0')}:${uptimeSecs.toString().padStart(2, '0')}\`
+- *تم التشغيل منذ:* \`${uptimeHours.toString().padStart(2, '0')}:${uptimeMins.toString().padStart(2, '0')}:${uptimeSecs.toString().padStart(2, '0')}\`
 
 ——> *الـنـظـام 💻*
 - *النظام:* \`${platform} ${arch}\`
@@ -46,20 +46,20 @@ const handler = async (m, { conn, bot, config }) => {
 ——> *احـصـائـيـات 📊*
 - *المجموعات:* \`${groupCount}\`
 
-——> *الـبـوتـات الـفـرعـيـه 🎪*
+——> *الـبـوتـات الـفـرعـيـه 📲*
 - *الإجمالي:* \`${subCount}\`
 - *المتصل:* \`${subConnected}\`
 - *المنفصل:* \`${subCount - subConnected}\`
 
 ——> *الـمـالـكـيـن 👑*
 - *العدد:* \`${bot.owners?.length || 0}\`
-- *الرئيسي:* \`${bot.owners?.[0]?.name || 'VA'} (${bot.owners?.[0]?.jid?.split('@')[0] || 'لا يوجد'})\`
+- *الرئيسي:* \`${bot.owners?.[0]?.name || '𝑹𝑨𝑴𝑬𝒁'} (${bot.owners?.[0]?.jid?.split('@')[0] || 'لا يوجد'})\`
 
-> *_VII7 BOT SYSTEM_*`;
+> *_𝐆𝐎𝐊𝐔 𝐁𝐎𝐓🐉 𝑺𝒀𝑺𝑻𝑬𝑴_*`;
 
   await conn.sendMessage(m.chat, {
     text: msg,
-    contextInfo: context(m.sender, "https://i.pinimg.com/736x/cf/66/94/cf6694258ca9839b43bdaf415c6c56fc.jpg") }, { quoted: reply_status });
+    contextInfo: context(m.sender, "https://i.imgur.com/clDbZ1w.jpeg") }, { quoted: reply_status });
 };
 
 handler.command = ["معلومات", "info", "botinfo", "حالة"];
@@ -72,13 +72,13 @@ const context = (jid, img) => ({
     isForwarded: true,
     forwardingScore: 1,
     forwardedNewsletterMessageInfo: {
-        newsletterJid: '120363225356834044@newsletter',
-        newsletterName: '𝐕𝐈𝐈7 ~ 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🕷️',
+        newsletterJid: '',
+        newsletterName: '',
         serverMessageId: 0
     },
     externalAdReply: {
-        title: "𝐏𝐎𝐌𝐍𝐈-𝐀𝐈 🎪 | 𝐁𝐨𝐭 𝐢𝐬 𝐛𝐮𝐢𝐥𝐭 𝐨𝐧 𝐭𝐡𝐞 𝐖𝐒/𝐕𝐈𝐈 𝐟𝐫𝐚𝐦𝐞𝐰𝐨𝐫𝐤",
-        body: "𝚆𝚑𝚊𝚝𝚜𝙰𝚙𝚙 𝚋𝚘𝚝 𝚝𝚑𝚊𝚝 𝚒𝚜 𝚎𝚊𝚜𝚢 𝚝𝚘 𝚖𝚘𝚍𝚒𝚏𝚢 𝚊𝚗𝚍 𝚟𝚎𝚛𝚢 𝚏𝚊𝚜𝚝",
+        title: "",
+        body: "",
         thumbnailUrl: img,
         sourceUrl: '',
         mediaType: 1,
