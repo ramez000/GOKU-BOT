@@ -9,7 +9,7 @@ let user = async (m, { args, command, text, conn }) => {
         );
 
         if (!participant) {
-            return m.reply(`الرقم ${targetNumber} لازم يبقي الجروب`);
+            return m.reply(`الرقم ${targetNumber} يجب أن يكون المجموعة`);
         }
 
         const user = {
