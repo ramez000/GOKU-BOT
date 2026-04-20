@@ -1,14 +1,13 @@
-# ✨ Pomni AI- WhatsApp Bot
+# 🐉 GOKU BOT- WhatsApp Bot
 
 <div align="center">
-  <img src="https://i.pinimg.com/originals/e2/21/20/e221203f319df949ee65585a657501a2.jpg" alt="IMAGE" width="500"/>
+  <img src="https://i.imgur.com/Y06wW0M.jpeg" alt="IMAGE" width="500"/>
   
-  [![GitHub](https://img.shields.io/badge/GitHub-VENi-blue?style=for-the-badge&logo=github)](https://github.com/deveni0)
-  [![WhatsApp](https://img.shields.io/badge/WhatsApp-Owner-green?style=for-the-badge&logo=whatsapp)](https://wa.me/201554582851)
-  [![WhatsApp](https://img.shields.io/badge/WhatsApp-Channel-orange?style=for-the-badge&logo=whatsapp)](https://whatsapp.com/channel/0029VaQim2bAu3aPsRVaDq3v)
+  [![GitHub](https://img.shields.io/badge/GitHub-GOKU-purple?style=for-the-badge&logo=github)](https://github.com/ramez000)
+  [![WhatsApp](https://img.shields.io/badge/WhatsApp-Owner-green?style=for-the-badge&logo=whatsapp)](https://wa.me/249962416396)
  
   
-  **A simple WhatsApp bot with a framework [MeowSab](https://github.com/deveni0/ws)** 
+  **A simple WhatsApp bot with a framework [Kintoun](https://github.com/ramez000/kn)** 
   
    [Installation](#-installation) • [Support](#-support) • [Features](#-features) • [Hosting](#-hosting)
 </div>
@@ -35,8 +34,8 @@
 termux-setup-storage
 pkg update -y && pkg upgrade -y
 pkg install git nodejs -y
-git clone https://github.com/deveni0/Pomni-AI.git
-cd Pomni-AI
+git clone https://github.com/ramez000/GOKU-BOT.git
+cd GOKU-BOT
 npm install
 npm start
 ```
@@ -53,13 +52,12 @@ npm start
 
 <h4>
 
-**For support, contact the developer [here](https://wa.me/201023727053?text=عند+مشكله)**  
-**Discount code:** `veni`
+**For support, contact the developer [here](https://wa.me/249962416396?text=عند+مشكله)**  
+**Discount code:** `GOKU`
 
 </h4>
 
-[![Website](https://img.shields.io/badge/Website-Cavirox-orange?style=for-the-badge&logo=website)](https://cavirox.com)
-[![WhatsApp](https://img.shields.io/badge/WhatsApp-Channel-blue?style=for-the-badge&logo=whatsapp)](https://whatsapp.com/channel/0029Vb7YDnD0gcfA4FhQrp1D)
+[![Website](https://img.shields.io/badge/Website-Cavirox-blue?style=for-the-badge&logo=website)](https://cavirox.com)
  
 
 </div>
@@ -69,17 +67,14 @@ npm start
 
 # 👤 support
 
-- Owner: [click](https://wa.me/201554582851)
-- Group: [Join here](https://chat.whatsapp.com/BqNmpkndDplLaJVigfSi5D)
-- Community: [Join here](https://chat.whatsapp.com/BuzSrIJOV7S881JMqu8blX)
-
+- Owner: [click here: RAMEZ](https://wa.me/249962416396)
 
 ---
 
 <div align="center">
 
-**Made with ❤️ by [VENi Owner](https://github.com/deveni0)**
+**Made by [RAMEZ Owner](https://github.com/deveni0)**
 
-**© 2026 Pomni AI- All Rights Reserved**
+**© 2026 GOKU-BOT- All Rights Reserved**
 
 </div>
