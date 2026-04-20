@@ -4,7 +4,7 @@ const test = async (m, { conn, bot }) => {
   conn.msgUrl(m.chat, "⚙️ Bot is restarting...", { 
     title: "",
     body: "",
-    img: "https://i.imgur.com/clDbZ1w.jpeg",
+    img: "https://i.imgur.com/qmiUrBS.jpeg",
     big: false 
   });
   
