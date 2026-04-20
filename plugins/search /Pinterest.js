@@ -1,6 +1,6 @@
 async function test(m, { conn, bot, text }) {
   try {
-    if (!text) return m.reply("*💙 ~ اكتب اسم البحث انجلش عشان يطلع لك الصور ~ ❤️*");
+    if (!text) return m.reply("*💙 ~ أكتب اسم البحث باللغة الإنجليزية ~ ❤️*");
     
     const res = await bot.Api.search.pinterestImages({ q: text });
     const arr = res.data;
@@ -32,8 +32,8 @@ async function test(m, { conn, bot, text }) {
       cards: cards,
       mentions: [m.sender],
       newsletter: {
-      name: '𝐕𝐈𝐈7 ~ 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🕷️',
-      jid: '120363225356834044@newsletter'
+      name: '',
+      jid: ''
     },
     }, reply_status);
     
