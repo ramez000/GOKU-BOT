@@ -3,7 +3,7 @@ import FormData from 'form-data';
 
 let handler = async (m, { conn }) => {
   try {
-    if (!m.quoted) return m.reply("*ابعت الصوره الي و رد عليها الي عاوز انسخ منها الكلام (⁠ ⁠╹⁠▽⁠╹⁠ ⁠)*");
+    if (!m.quoted) return m.reply("*أرسل الصورة التي تريد أن تنسخ منها الكلام ورد عليها (⁠ ⁠╹⁠▽⁠╹⁠ ⁠)*");
     
     const buffer = await m.quoted.download();
     const form = new FormData();
