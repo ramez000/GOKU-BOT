@@ -2,7 +2,7 @@ const handler = async (m, { conn, bot }) => {
   let targetLid = m.mentionedJid?.[0] || m.quoted?.sender;
   let targetJid = m.lid2jid(m.mentionedJid?.[0] || m.quoted?.sender)
    if (!targetJid || !targetLid) {
-    return m.reply('⚠️ *يرجى منشن الشخص أو الرد على رسالته* ⚠️');
+    return m.reply('⚠️ *يرجى منشن العضو أو الرد على رسالته* ⚠️');
   }
   const user = (await conn.groupMetadata(m.chat)).participants.find(
             p => p.id === targetLid || 
