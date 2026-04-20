@@ -5,9 +5,9 @@ import { Convert } from "meowsab";
 
 let handler = async (m, { conn, text, command }) => {
  
- if (!m.quoted) return m.reply('🎏 رد علي الاستيكر ~');
+ if (!m.quoted) return m.reply('🎏 رد على الملصق ~');
 
- if (!/webp/.test(m.quoted.mimetype)) return m.reply(`ده مش استيكر`);
+ if (!/webp/.test(m.quoted.mimetype)) return m.reply(`هذا ليس ملصقاً`);
 
  const buffer = await m.quoted.download();;
  let smp4 = await Convert.WebpToMp4(buffer)
