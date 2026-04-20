@@ -21,7 +21,7 @@ const ff = async (m, { conn, text, command }) => {
         if (user.banned) {
             delete user.banned;
             await conn.sendMessage(m.chat, { 
-                text: `*✅ ~تم فك حظر @${target.split('@')[0]}*\n> *_دلوقت يقدر يكلم البوت عادي_*`, 
+                text: `*✅ ~تم فك حظر @${target.split('@')[0]}*\n> *_أصبح بإمكانه إستخدام البوت 🥳_*`, 
                 mentions: [target] 
             });
         } else {
@@ -32,7 +32,7 @@ const ff = async (m, { conn, text, command }) => {
     
     user.banned = true;
     await conn.sendMessage(m.chat, { 
-        text: `*✅ ~تم حظر @${target.split('@')[0]}*\n> *_مش هيعرف يكلم البوت تاني_*`, 
+        text: `*✅ ~تم حظر @${target.split('@')[0]}*\n> *_لن يتمكن من إستخدام البوت مرة أخرى_*`, 
         mentions: [target] 
     });
 };
