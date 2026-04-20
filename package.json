@@ -1,18 +1,18 @@
 {
-  "name": "Pomni AI",
+  "name": "GOKU BOT",
   "version": "2.0.0",
-  "description": "Simple WhatsApp bot, Modified by VENi - youssefv",
+  "description": "Simple WhatsApp bot, Modified by GOKU - RAMEZ",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "start": "node index.js"
   },
-  "keywords": ["whatsapp-bot", "pomni-ai"],
-  "author": "VENi - youssefv",
+  "keywords": ["whatsapp-bot", "GOKU-BOT"],
+  "author": "GOKU -RAMEZ",
   "license": "MIT",
   "dependencies": {
-    "meowsab": "https://github.com/deveni0/ws/tarball/main",
-    "sharp": "https://github.com/deveni0/sharp-tmx/tarball/main",
+    "Kintoun": "https://github.com/ramez000/kn/tarball/main",
+    "sharp": "https://github.com/ramez000/sharp-tmx/tarball/main",
     "cheerio": "1.0.0-rc.12",
     "chokidar": "^5.0.0",
     "file-type": "^18.0.0",
@@ -21,9 +21,9 @@
     "wa-sticker-formatter": "^4.3.2"
   },
   "overrides": {
-    "sharp": "https://github.com/deveni0/sharp-tmx/tarball/main",
+    "sharp": "https://github.com/ramez000/sharp-tmx/tarball/main",
     "*": {
-      "sharp": "https://github.com/deveni0/sharp-tmx/tarball/main"
+      "sharp": "https://github.com/ramez000/sharp-tmx/tarball/main"
     }
   }
 }
