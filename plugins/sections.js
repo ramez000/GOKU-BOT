@@ -106,7 +106,7 @@ if (section === "games") {
 }
 
 // ===== 7 - الصور =====
-if (section === "search") {
+if (section === "pictures") {
     await sendSection(m, conn, `
 ╭━━━━━━━━━━━━━━━╮
 ┃ 🖼 *قسم الصور*
