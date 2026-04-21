@@ -2,44 +2,45 @@ async function handler(m, { conn, command, args }) {
     const chatId = m.chat;
     const subCmd = args[0]?.toLowerCase();
     const menu = `
-╭─┈─┈─┈─⟞🕸️⟝─┈─┈─┈─╮
-│ *نظام التفعيل والتشغيل*
+╭─┈─┈─┈─⟞🐉⟝─┈─┈─┈─╮
+│ *❌ نظام التفعيل والتشغيل ✅*
+│
 │
 │ *.تفعيل ايقاف_الترحيب*
-│ > البوت هيبطل يرحب بالاعضاء
+│ > البوت سيوقف ترحيب بالاعضاء
 │
 │ *.تفعيل تشغيل_الترحيب*
-│ > البوت يرحب بالاعضاء
+│ > البوت سيرحب بالاعضاء
 │
 │ *.تفعيل تشغيل_الادمن*
-│ > البوت يرد على المشرفين فقط
+│ > البوت سيعمل مع المشرفين فقط
 │
 │ *.تفعيل ايقاف_الادمن*
-│ > البوت يرد على الجميع
+│ > البوت سيعمل مع جميع الأعضاء
 │
 │ *.تفعيل مطور_فقط*
-│ > البوت يتفاعل مع المطورين فقط
+│ > البوت سيتفاعل مع المطورين فقط
 │
 │ *.تفعيل مطور_عام*
-│ > البوت يتفاعل مع الجميع
+│ > البوت سيتفاعل مع الجميع
 │
 │ *.تفعيل تشغيل_مضاد_الروابط*
-│ > البوت يحذف أي رابط
+│ > البوت سيحذف أي رابط
 │
 │ *.تفعيل ايقاف_مضاد_الروابط*
-│ > البوت مايحذفش الروابط
+│ > البوت سيتوقف عن حذف الروابط
 │
 │ *.تفعيل ايقاف_خاص*
-│ > البوت هيشتغل مع المطورين فقط خاص
+│ > البوت سيعمل مع المطورين فقط في الخاص
 │
 │ *.تفعيل تشغيل_خاص*
-│ > البوت هيشتغل مع كله خاص
-╰─┈─┈─┈─⟞🕸️⟝─┈─┈─┈─╯
+│ > البوت سيعمل مع الجميع في الخاص
+╰─┈─┈─┈─⟞🐉⟝─┈─┈─┈─╯
 `;
     if (!subCmd) {
         await conn.sendButton(m.chat, {
             bodyText:  menu,
-            footerText: "𝐕𝐈𝐈7 ~ 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🕷️",
+            footerText: "",
             buttons: [
     { name: "quick_reply", params: { display_text: "🪐 ايقاف التنصيب (البوتات الفرعي)", id: ".تفعيل ايقاف_الفرعي" } },
     { name: "quick_reply", params: { display_text: "🚀 تشغيل التنصيب", id: ".تفعيل تشغيل_الفرعي" } },
@@ -56,8 +57,8 @@ async function handler(m, { conn, command, args }) {
 ],
           mentions: [m.sender],
   newsletter: {
-      name: '𝐕𝐈𝐈7 ~ 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🕷️',
-      jid: '120363225356834044@newsletter'
+      name: '',
+      jid: ''
     },
   interactiveConfig: {
     buttons_limits: 1, // لازم تبقي واحد
@@ -74,28 +75,28 @@ async function handler(m, { conn, command, args }) {
     switch (subCmd) {
     case 'ايقاف_الفرعي':
             if (!m.isOwner) {
-                result = '*❌ الأمر ده بس لـ المطور*';
+                result = '*هذا الأمر للمطورين فقط ❌*';
                 break;
             }
             global.db.noSub = true;
-            result = '*✅ تم ايقاف تنصيب البوتات الفرعيه*\n> ماحدش هيعرف يستخدم امر تنصيب تاني';
+            result = '*✅ تم ايقاف تنصيب البوتات الفرعيه*\n> *ماحد يقدر يستخدم تنصيب مرة ثانية*';
             break;
             
         case 'تشغيل_الفرعي':
             if (!m.isOwner) {
-                result = '*❌ الأمر ده بس لـ المطور*';
+                result = '*هذا الأمر للمطورين فقط ❌*';
                 break;
             }
             global.db.noSub = false;
-            result = '*✅ تم تشغيل تنصيب البوتات الفرعيه*\n> دلوقتي الكل يقدر يستخدم البوتات الفرعيه';
+            result = '*✅ تم تشغيل تنصيب البوتات الفرعيه*\n> *صار الآن بإمكان الجميع إستخدام التنصيب*'';
             break;
         case 'ايقاف_الترحيب':
             if (!m.isOwner && !m.isAdmin) {
-                result = '*❌ هذا الأمر للمشرفين فقط*';
+                result = '*❌ هذا الأمر للمشرفين فقط'';
                 break;
             }
             global.db.groups[chatId].noWelcome = true;
-            result = '*✅ تم تفعيل وضع عدم الترحيب*\n> البوت هيبطل يرحب بالاعضاء';
+            result = '*✅ تم تفعيل وضع عدم الترحيب*\n> *البوت سيتوقف عن الترحيب بالأعضاء*';
             break;
             
         case 'تشغيل_الترحيب':
@@ -104,7 +105,7 @@ async function handler(m, { conn, command, args }) {
                 break;
             }
             global.db.groups[chatId].noWelcome = false;
-            result = '*✅ تم تفعيل وضع الترحيب*\n> البوت يرحب بالاعضاء';
+            result = '*✅ تم تفعيل وضع الترحيب*\n> *البوت سيرحب بالأعضاء*';
             break;
             
         case 'تشغيل_الادمن':
@@ -112,8 +113,8 @@ async function handler(m, { conn, command, args }) {
                 result = '*❌ هذا الأمر للمشرفين فقط*';
                 break;
             }
-            global.db.groups[chatId].adminOnly = true;
-            result = '*✅ تم تفعيل وضع الادمن*\n> البوت سيتفاعل مع المشرفين فقط';
+            global.db.groups[chatId].adminOnly =true;
+            result = '*✅ تم تفعيل وضع الادمن*\n> *البوت سيتفاعل مع المشرفين فقط*';
             break;
             
         case 'ايقاف_الادمن':
@@ -122,7 +123,7 @@ async function handler(m, { conn, command, args }) {
                 break;
             }
             global.db.groups[chatId].adminOnly = false;
-            result = '*✅ تم فك وضع الادمن*\n> البوت سيتفاعل مع جميع الأعضاء';
+            result = '*✅ تم إيقاف وضع الآدمن*\n> *البوت سيتفاعل مع جميع الأعضاء*';
             break;
             
         case 'مطور_فقط':
@@ -131,7 +132,7 @@ async function handler(m, { conn, command, args }) {
                 break;
             }
             global.db.ownerOnly = true;
-            result = '*✅ تم تفعيل وضع المطور فقط*\n> البوت سيتفاعل مع المطورين فقط';
+            result = '*✅ تم تفعيل وضع المطور فقط*\n> *البوت سيتفاعل مع المطورين فقط*';
             break;
             
         case 'مطور_عام':
@@ -140,7 +141,7 @@ async function handler(m, { conn, command, args }) {
                 break;
             }
             global.db.ownerOnly = false;
-            result = '*✅ تم تفعيل وضع المطور العام*\n> البوت سيتفاعل مع الجميع';
+            result = '*✅ تم تفعيل وضع المطور العام*\n> *رائع! أصبح البوت يتفاعل مع الجميع الآن*';
             break;
             
         case 'تشغيل_مضاد_الروابط':
@@ -149,7 +150,7 @@ async function handler(m, { conn, command, args }) {
                 break;
             }
             global.db.groups[chatId].antiLink = true;
-            result = '*✅ تم تفعيل مضاد الروابط*\n> البوت هيحذف أي رابط';
+            result = '*✅ تم تفعيل مضاد الروابط*\n> *البوت سيحذف أي رابط*';
             break;
             
         case 'ايقاف_مضاد_الروابط':
@@ -158,7 +159,7 @@ async function handler(m, { conn, command, args }) {
                 break;
             }
             global.db.groups[chatId].antiLink = false;
-            result = '*✅ تم ايقاف مضاد الروابط*\n> البوت مايحذفش الروابط';
+            result = '*✅ تم ايقاف مضاد الروابط*\n> *البوت سيتوقف عن حذف الروابط*';
             break;
             case 'ايقاف_خاص':
             if (!m.isOwner) {
@@ -166,7 +167,7 @@ async function handler(m, { conn, command, args }) {
                 break;
             }
             global.db.dev = true;
-            result = '*✅ تم ايقاف الخاص للمستخدمين*\n> فقط المطورين يقدروا يستحدموه خاص';
+            result = '*✅ تم ايقاف الخاص للمستخدمين*\n> *البوت سيعمل مع المطورين فقط في الخاص*';
             break;
             case 'تشغيل_خاص':
             if (!m.isOwner) {
@@ -174,7 +175,7 @@ async function handler(m, { conn, command, args }) {
                 break;
             }
             global.db.dev = false;
-            result = '*✅ تم تشغيل البوت خاص ل الكل*\n> كله دلوقت يقدر يستخدم البوت خاص';
+            result = '*✅ تم تشغيل البوت خاص للكل*\n> *أصبح بإمكان الجميع إستخدام البوت في الخاص*';
             break;
         default:
             return m.reply("╭─┈─┈─┈─⟞🕸️⟝─┈─┈─┈─╮\n│ *نظام التفعيل والتشغيل*\n│\n│ 🔇 ايقاف_الترحيب\n│ 🔊 تشغيل_الترحيب\n│ 👑 تشغيل_الادمن\n│ 👥 ايقاف_الادمن\n│ ⭐ مطور_فقط\n│ 🌍 مطور_عام\n│ 🚫 تشغيل_مضاد_الروابط\n│ ✅ ايقاف_مضاد_الروابط\n╰─┈─┈─┈─⟞🕸️⟝─┈─┈─┈─╯");
