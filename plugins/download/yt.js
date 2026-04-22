@@ -13,12 +13,12 @@ const handler = async (m, { conn, command, text }) => {
   if (!res?.status) throw '❌ فشل في جلب البيانات من الرابط';
   
   const type = isAudio ? 'اغـانـي' : 'فيـديـوز';
-  let caption = `*🐞 YouTube | يـوتـيـوب ${type} 🐞*\n\n`;
-  caption += `╭─┈─┈─┈─⟞🍧⟝─┈─┈─┈─╮\n`;
-  caption += `*❲ 📽️ ❳ الـعـنـون:* ${res.title}\n`;
+  let caption = `*📂 YouTube | يـوتـيـوب ${type} 📂*\n\n`;
+  caption += `╭─┈─┈─┈─⟞📥⟝─┈─┈─┈─╮\n`;
+  caption += `*❲ 📽️ ❳ الـعـنـوان:* ${res.title}\n`;
   caption += `*❲ 📢 ❳ الـقـنـاة:* ${res.channel}\n`;
   caption += `*❲ ⏳ ❳ الـجـوده:* ${res.quality}\n`;
-  caption += `╰─┈─┈─┈─⟞🍬⟝─┈─┈─┈─╯\n`;
+  caption += `╰─┈─┈─┈─⟞📤⟝─┈─┈─┈─╯\n`;
   caption += `> _*❲ ⏱️ ❳ الرجاء الانتظار قليلاً...*_`;
   
   await conn.sendMessage(m.chat, { 
