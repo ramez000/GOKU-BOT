@@ -32,16 +32,19 @@ const handler = async (m, { conn, command, text }) => {
         newsletterName: '',
         serverMessageId: 0
       },
-      externalAdReply: {
-        title: res.title,
-        body: res.channel,
-        thumbnailUrl: res.thumbnail,
-        sourceUrl: '',
-        mediaType: 1,
-        renderLargerThumbnail: true
-      }
+      await conn.sendMessage(m.chat, { 
+  text: caption,
+  contextInfo: {
+    mentionedJid: [m.sender],
+    isForwarded: true,
+    forwardingScore: 1,
+    forwardedNewsletterMessageInfo: {
+      newsletterJid: '',
+      newsletterName: '',
+      serverMessageId: 0
     }
-  });
+  }
+});
   
   await conn.sendMessage(m.chat, isAudio ? { 
     audio: { url: res.downloadUrl }, 
