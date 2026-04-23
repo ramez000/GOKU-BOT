@@ -1,9 +1,9 @@
 const example = async (m, { conn }) => {
 
 await conn.sendButton(m.chat, {
-  imageUrl: "https://i.pinimg.com/736x/f3/5d/2e/f35d2ed376e03aa254e7f34b4b94992e.jpg",
-  bodyText: "Hello! This is the message text",
-  footerText: "Footer text",
+  imageUrl: "",
+  bodyText: "",
+  footerText: "",
   buttons: [
     // 1. Quick Reply
     { name: "quick_reply", params: { display_text: "👍 Quick Reply", id: "quick1" } },
@@ -13,7 +13,7 @@ await conn.sendButton(m.chat, {
     { name: "cta_url", params: { display_text: "🔗 Google Link", url: "https://google.com" } },
     
     // 3. Call Button
-    { name: "cta_call", params: { display_text: "📞 Call Support", phone_number: "201234567890" } },
+    { name: "cta_call", params: { display_text: "📞 Call Support", phone_number: "249962416396" } },
     
     // 4. Copy Button
     { name: "cta_copy", params: { display_text: "📋 Copy Code", copy_code: "ABC123XYZ" } },
@@ -33,14 +33,14 @@ await conn.sendButton(m.chat, {
     // 6. Call Permission Request
     { name: "call_permission_request", params: { 
       display_text: "📞 Request Call",
-      phone_number: "201234567890",
+      phone_number: "249962416396",
       duration: 60
     }}
   ],
   mentions: [m.sender],
   newsletter: {
-      name: '𝐕𝐈𝐈7 ~ 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🕷️',
-      jid: '120363225356834044@newsletter'
+      name: '',
+      jid: ''
     },
   interactiveConfig: {
     buttons_limits: 1, // لازم تبقي واحد
