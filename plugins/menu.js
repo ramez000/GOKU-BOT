@@ -47,9 +47,10 @@ ${CATEGORIES.map(c => `➤ ${c[0]} │ ${c[3]} ${c[1]}`).join('\n')}
 `.trim();
 
     const msg = await conn.sendMessage(m.chat, {
-    image: { url: 'https://i.imgur.com/clDbZ1w.jpeg' },
-    caption: ''
-});
+    image: { url: 'https://i.imgur.com/clDbZ1w.jpeg' }, // حط رابطك هنا
+    caption: text, // هذا أهم سطر (القائمة)
+    contextInfo: context(m.sender, getImg(bot))
+}, { quoted: reply_status });
 
     global.menus[msg.key.id] = {
         chatId: m.chat,
