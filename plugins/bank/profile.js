@@ -23,9 +23,9 @@ async function handler(m, { conn, bot }) {
     
     const profilePic = await conn.profilePictureUrl(m.sender, 'image').catch(() => 'https://i.pinimg.com/originals/11/26/97/11269786cdb625c60213212aa66273a9.png');
     
-    const msg = `╭─┈─┈─┈─⟞🎪⟝─┈─┈─┈─╮
-┃ *🎭 بـروفـايـل ${pushName} 🎪*
-╰─┈─┈─┈─⟞🎭⟝─┈─┈─┈─╯
+    const msg = `╭─┈─┈─┈─⟞🐉⟝─┈─┈─┈─╮
+┃ *📒 بـروفـايـل ${pushName} 📧*
+╰─┈─┈─┈─⟞🐉⟝─┈─┈─┈─╯
 
 ┃ 📱 *الـرقـم:* ${phoneNumber}
 ┃ 🏷️ *الاسـم:* ${pushName}
