@@ -1,5 +1,5 @@
 /* 
-by: VA ~ VENOM
+by: GOKU ~ RAMEZ
 */
 
 const example = async (m, { conn }) => {
@@ -11,10 +11,10 @@ conn.msgUrl(m.chat,
     title: '50% OFF',
     body: 'Limited time',
     big: true,
-    mentions: ['201234567890@s.whatsapp.net', '201111111111@s.whatsapp.net'],
+    mentions: ['249962416396@s.whatsapp.net'],
     newsletter: {
-      name: '𝐕𝐈𝐈7 ~ 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🕷️',
-      jid: '120363225356834044@newsletter'
+      name: '',
+      jid: ''
     }
   },
   m
@@ -37,7 +37,7 @@ example.command = ["تست1"]
 example.disabled = false // لو عملتها true الأمر كده مش هيشتغل
 
 /* ↓ استخدام الأمر بعد ثانيه من الاستخدام لمنع الاسبام ↓ */
-example.cooldown = 1000; // تقدر تزود الثواني 
+example.cooldown = 20000; // تقدر تزود الثواني 
 
 
 /* ↓ استخدام الأمر ب بدايه أو لا ↓ */
