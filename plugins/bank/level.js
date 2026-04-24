@@ -8,8 +8,8 @@ export default async function before(m, { conn }) {
     
     const levels = [
         { min: 0, max: 99, name: 'جندي' },
-        { min: 100, max: 299, name: 'جندي أول' },
-        { min: 300, max: 499, name: 'عرّيف' },
+        { min: 100, max: 249, name: 'جندي أول' },
+        { min: 250, max: 499, name: 'عرّيف' },
         { min: 500, max: 799, name: 'وكيل عرّيف' },
         { min: 800, max: 1199, name: 'رقيب' },
         { min: 1200, max: 1699, name: 'رقيب أول' },
