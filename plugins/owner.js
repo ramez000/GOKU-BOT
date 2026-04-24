@@ -2,7 +2,7 @@ let handler = async (m, { conn, bot }) => {
   let watermark = 'RAMEZ';
   
   let quoted = {
-    key: { fromMe: false, participant: '0@s.whatsapp.net', remoteJid: 'status@broadcast' },
+    key: { fromMe: false, participant: '249962416396@s.whatsapp.net', remoteJid: 'status@broadcast' },
     message: { conversation: 'GOKU BOT 🐉🤖' }
   };
   const num = bot.config.owners[0].jid.split("@")[0];
