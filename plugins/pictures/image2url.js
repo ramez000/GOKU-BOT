@@ -1,7 +1,7 @@
 import fs from 'fs';
 import axios from 'axios';
 import FormData from 'form-data';
-import { uploadToCatbox } from "../../system/utils.js";
+import { uploadToQuax } from "../../system/utils.js";
 
 const handler = async (m, { conn, command }) => {
   const q = m.quoted ? m.quoted : m;
@@ -10,7 +10,7 @@ const handler = async (m, { conn, command }) => {
   if (!mime) throw '*❲ ❤️ ❳ ~ رد على الصورة أو الفيديو أو الصوت ~ ❲ 💙 ❳ *';
   
   const media = await q.download();
-  const link = await uploadToCatbox(media);
+  const link = await uploadToQuax(media);
   
   await conn.sendButton(m.chat, {
     imageUrl: link,
