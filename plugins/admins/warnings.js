@@ -6,7 +6,7 @@ const handler = async (m, { conn }) => {
 
   if (!w[id]) {
     return conn.sendMessage(m.chat, {
-      text: `📊 @${id.split("@")[0]} معندكش أي إنذارات`,
+      text: `📊 @${id.split("@")[0]} ليست لديك أي إنذارات`,
       mentions: [id]
     }, { quoted: global.reply_status });
   }
