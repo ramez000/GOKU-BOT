@@ -1,6 +1,6 @@
 const handler = async (m, { conn }) => {
   const req = await conn.groupRequestParticipantsList(m.chat);
-  if (!req?.length) return m.reply("📭 مفيش ريكوستات");
+  if (!req?.length) return m.reply("📭 لا توجد طلبات معلقة");
 
   const arg = parseInt(m.text.split(" ")[1]);
   const limit = Number.isFinite(arg) && arg > 0 ? arg : req.length;
@@ -15,11 +15,11 @@ const handler = async (m, { conn }) => {
     );
   }
 
-  m.reply(`✅ تم قبول ${list.length} ريكوست`);
+  m.reply(`✅ تم قبول ${list.length} طلب`);
 };
 
-handler.command = ["اقبل_ريكوستات"];
-handler.usage = ['اقبل_ريكوستات', 'اقبل_الطلبات'];
+handler.command = ["اقبل_طلبات"];
+handler.usage = ['اقبل_طلبات', 'اقبل_الطلبات'];
 handler.category = "admin";
 handler.admin = true;
 handler.botAdmin = true
