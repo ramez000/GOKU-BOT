@@ -30,7 +30,7 @@ messageText += `> *إجمالي المشاركين — ${participants.length}*`;
 
 messageText += `> *╭─┈─┈─⟞🐉⟝─┈─┈─╮*`
 messageText += `> *┃ 𝐆𝐎𝐊𝐔 𝐁𝐎𝐓🐉🤖*`
-messageText += `> *╰─┈─┈─⟞🐉⟝─┈─┈─╯*`,
+messageText += `> *╰─┈─┈─⟞🐉⟝─┈─┈─╯*`;
     
 return conn.sendMessage(m.chat, { 
     text: messageText, 
