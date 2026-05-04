@@ -1,4 +1,4 @@
- const handler = async (m, { conn }) => {
+const handler = async (m, { conn }) => {
     const q = m.quoted || m;
     const mime = q.mimetype || '';
 
@@ -16,9 +16,9 @@
     }
 };
 
-handler.usage = ["صوره_بوت"];
+handler.usage = ["ضع"];
 handler.category = "owner";
-handler.command = ["صوره_بوت", "botpp""];
+handler.command = ["ضع", "botpp"];
 handler.owner = true;
 
 export default handler;
