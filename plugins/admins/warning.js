@@ -2,13 +2,13 @@ const handler = async (m, { conn }) => {
   let targetLid = m.mentionedJid?.[0] || m.quoted?.sender;
   let targetJid = m.lid2jid(targetLid);
 
-  if (!targetJid || !targetLid) return m.reply('⚠️ *يرجى منشن الشخص أو الرد على رسالته* ⚠️');
+  if (!targetJid || !targetLid) return m.reply('⚠️ *يرجى منشن العضو أو الرد على رسالته* ⚠️');
 
   const user = (await conn.groupMetadata(m.chat)).participants.find(
     p => p.id === targetLid || p.phoneNumber === targetJid
   );
 
-  if (!user) return m.reply("❌ المستخدم غير موجود في الجروب");
+  if (!user) return m.reply("❌ المستخدم غير موجود في المجموعة");
 
   db.groups[m.chat] ??= {};
   db.groups[m.chat].warnings ??= {};
@@ -38,7 +38,7 @@ handler.before = async (m, { conn }) => {
 
   if (g.warnings[user] >= 3) {
     await conn.sendMessage(m.chat, {
-      text: `🚫 @${user.split("@")[0]} انت خالفت القوانين، دلوقتي هنطردك`,
+      text: `🚫 @${user.split("@")[0]} انت خالفت القوانين، الحين بتنطرد`,
       mentions: [user]
     }, { quoted: global.reply_status });
 
