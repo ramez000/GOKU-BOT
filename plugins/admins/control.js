@@ -15,7 +15,7 @@ let control = async (m, { command, text, conn, bot, participants }) => {
         };
 
         if (command === "ضيف") {
-            if (!text) return m.reply("❌ فين الرقم؟");
+            if (!text) return m.reply("❌ وين الرقم؟");
             if (m.quoted) {
                 await conn.groupParticipantsUpdate(m.chat, [m.quoted.sender], 'add');
                 return m.reply("*✅ تمت الإضافة*");
