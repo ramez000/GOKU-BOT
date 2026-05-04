@@ -92,7 +92,7 @@ async function handler(m, { conn }) {
 ┃ *⌯︙ ${q.question}*  
 ╰─┈─┈─┈─⟞⚙️⟝─┈─┈─┈─╯  
 
-> _⏱️ عندك 60 ثانية_\n> _جاوب بسرعة تكسب نقاط وفلوس_`);
+> _فكك الكلمة بسرعة قبل إنتهاء الوقت_\n> وقت اللعبة: 60 ثانية ⏰`);
 
     if (!global.break.scores[m.chat]) global.break.scores[m.chat] = {};  
 
