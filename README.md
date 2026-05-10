@@ -73,7 +73,7 @@ npm start
 
 <div align="center">
 
-**Made by [RAMEZ Owner](https://github.com/deveni0)**
+**Made by [RAMEZ Owner](https://github.com/ramez000)**
 
 **© 2026 GOKU-BOT- All Rights Reserved**
 
