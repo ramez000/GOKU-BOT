@@ -28,12 +28,12 @@ if (!global.db) {
 const { config } = client;
 config.info = { 
   nameBot: "𝐆𝐎𝐊𝐔 𝐁𝐎𝐓🐉", 
-  nameChannel: "", 
+  nameChannel: "𝐆𝐎𝐊𝐔-𝐁𝐎𝐓 🐉", 
   idChannel: "@newsletter",
   urls: {
     repo: "https://github.com/ramez000/GOKU-BOT",
     api: "https://emam-api.web.id",
-    channel: ""
+    channel: "120363409497248238@newsletter"
   },
   copyright: { 
     pack: '', 
