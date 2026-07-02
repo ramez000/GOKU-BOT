@@ -1,30 +1,30 @@
 const handler = async (m, { conn, text, command }) => {
-    if (!m.isGroup) return m.reply('❌ الأمر ده للجروبات بس');
+    if (!m.isGroup) return m.reply('هذا الأمر يستخدم في المجموعات فقط ❌');
 
     const actions = {
-        'جروب_اسم': async () => {
+        'قروب_اسم': async () => {
             if (!text) return m.reply('✏️ ~ اكتب الاسم الجديد');
             await conn.groupUpdateSubject(m.chat, text);
-            m.reply('✅ ~ تم تغيير اسم الجروب');
+            m.reply('✅ ~ تم تغيير اسم القروب');
         },
 
-        'جروب_وصف': async () => {
+        'قروب_وصف': async () => {
             if (!text) return m.reply('📝 ~ اكتب الوصف الجديد');
             await conn.groupUpdateDescription(m.chat, text);
-            m.reply('✅ ~ تم تغيير وصف الجروب');
+            m.reply('✅ ~ تم تغيير وصف القروب');
         },
 
-        'جروب_صوره': async () => {
+        'قروب_صورة': async () => {
             const q = m.quoted || m;
             const mime = q.mimetype || '';
 
             if (!/image/.test(mime)) {
-                return m.reply('🖼️ ~ رد على صورة');
+                return m.reply('🖼️ ~ رد على الصورة');
             }
 
             const media = await q.download();
             await conn.updateProfilePicture(m.chat, media);
-            m.reply('✅ ~ تم تغيير صورة الجروب');
+            m.reply('✅ ~ تم تغيير صورة القروب');
         }
     };
 
@@ -39,8 +39,8 @@ const handler = async (m, { conn, text, command }) => {
     }
 };
 
-handler.command = ['جروب_اسم', 'جروب_وصف', 'جروب_صوره'];
-handler.usage = ['جروب_اسم', 'جروب_وصف', 'جروب_صوره'];
+handler.command = ['قروب_اسم', 'قروب_وصف', 'قروب_صورة'];
+handler.usage = ['قروب_اسم', 'قروب_وصف', 'قروب_صورة'];
 handler.category = "admin";
 handler.group = true;
 handler.admin = true;
