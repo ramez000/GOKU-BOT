@@ -84,8 +84,8 @@ const access = async (msg, checkType, time) => {
             title: "",
             body: "",
             newsletter: {
-                name: '',
-                jid: ''
+                name: '𝐆𝐎𝐊𝐔-𝐁𝐎𝐓 🐉',
+                jid: '120363409497248238@newsletter'
             },
             big: false
         }, quoted);
