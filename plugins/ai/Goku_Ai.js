@@ -21,13 +21,13 @@ ${text}
   await conn.sendMessage(m.chat, {
     text: res.answer,
     edit: loadingMsg.key,
-    contextInfo: context(m.sender, "https://qu.ax/x/4Hnbh.jpg")
+    contextInfo: context(m.sender, "https://i.imgur.com/RpmX04B.jpeg")
   });
 };
 
-handler.usage = ["إيرن"];
+handler.usage = ["غوكو"];
 handler.category = "ai";
-handler.command = ["إيرن", "eren"];
+handler.command = ["غوكو", "Goku"];
 
 export default handler;
 
@@ -36,13 +36,13 @@ const context = (jid, img) => ({
     isForwarded: true,
     forwardingScore: 1,
     forwardedNewsletterMessageInfo: {
-        newsletterJid: '120363225356834044@newsletter',
-        newsletterName: '𝐄𝐑𝐄𝐍 ~ 𝐓𝐢𝐭𝐚𝐧 🦾',
+        newsletterJid: '120363409497248238@newsletter',
+        newsletterName: '𝐆𝐎𝐊𝐔-𝐁𝐎𝐓 🐉',
         serverMessageId: 0
     },
     externalAdReply: {
-        title: "𝐀𝐓𝐓𝐀𝐂𝐊 𝐎𝐍 𝐓𝐈𝐓𝐀𝐍 💢 | 𝐑𝐮𝐦𝐛𝐥𝐢𝐧𝐠",
-        body: "𝙵𝚁𝙴𝙴𝙳𝙾𝙼 ~ ☆ 𝙸'𝚕𝚕 𝚔𝚎𝚎𝚙 𝚖𝚘𝚟𝚒𝚗𝚐 𝚏𝚘𝚛𝚠𝚊𝚛𝚍",
+        title: "",
+        body: "𝐈'𝐦 𝐒𝐨𝐧 𝐆𝐨𝐤𝐮!, 𝐈'𝐦 𝐚𝐥𝐰𝐚𝐲𝐬 𝐥𝐨𝐨𝐤𝐢𝐧𝐠 𝐟𝐨𝐫 𝐬𝐨𝐦𝐞𝐨𝐧𝐞 𝐬𝐭𝐫𝐨𝐧𝐠𝐞𝐫 𝐭𝐨 𝐟𝐢𝐠𝐡𝐭!",
         thumbnailUrl: img,
         sourceUrl: '',
         mediaType: 1,
