@@ -23,7 +23,7 @@ const handler = async (m, { conn, command, text }) => {
         user.name = name;
         user.age = parseInt(age);
         
-        const profilePic = await conn.profilePictureUrl(m.sender, 'image').catch(() => '');
+        const profilePic = await conn.profilePictureUrl(m.sender, 'image').catch(() => 'https://i.imgur.com/syAxGOj.jpeg');
         
         const msg = `╭─┈─┈─┈─⟞📝⟝─┈─┈─┈─╮
 ┃ *✅ تـم الـتـسـجـيـل بـنـجـاح*
@@ -33,9 +33,9 @@ const handler = async (m, { conn, command, text }) => {
 ┃ 🏷️ *الاسـم:* ${name}
 ┃ 📅 *الـعـمـر:* ${age}
 
-╭─┈─┈─┈─⟞🎪⟝─┈─┈─┈─╮
-┃ *أهـلاً وسـهـلاً فـي الـسـيـرك* 🎭
-╰─┈─┈─┈─⟞🤡⟝─┈─┈─┈─╯`;
+╭─┈─┈─┈─⟞🐲⟝─┈─┈─┈─╮
+┃ *𝐇𝐢! 𝐈'𝐦 𝐒𝐨𝐧 𝐆𝐨𝐤𝐮.* 👋
+╰─┈─┈─┈─⟞🐲⟝─┈─┈─┈─╯`;
 
         await conn.sendMessage(m.chat, {
             image: { url: profilePic },
@@ -78,9 +78,9 @@ const handler = async (m, { conn, command, text }) => {
 ┃ @${m.sender.split('@')[0]}
 ┃ 🏷️ تم حذف بياناتك بنجاح
 
-╭─┈─┈─┈─⟞🎪⟝─┈─┈─┈─╮
+╭─┈─┈─┈─⟞🐲⟝─┈─┈─┈─╮
 ┃ *يـمـكـنـك الـتـسـجـيـل مـرة أخـرى* 📝
-╰─┈─┈─┈─⟞🤡⟝─┈─┈─┈─╯`;
+╰─┈─┈─┈─⟞🐲⟝─┈─┈─┈─╯`;
 
         await conn.sendMessage(m.chat, {
             image: { url: profilePic },
