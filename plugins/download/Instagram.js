@@ -1,5 +1,5 @@
 const insta = async (m, { text, Api, conn }) => {
-  if (!text) return m.reply("❌: حط الرابط جنب الامر");
+  if (!text) return m.reply("❌: ضع الرابط مع الامر");
   
   const { status, data } = await Api.download.instagram ({ url: text })
   
@@ -23,17 +23,17 @@ const insta = async (m, { text, Api, conn }) => {
       if (thumbnail) {
         await conn.sendMessage(m.chat, { 
           image: { url: thumbnail },
-          caption: "```Instagram preview image```"
+          caption: ""
         });
       }
       
       if (video) {
         await conn.sendMessage(m.chat, { 
           video: { url: video }, 
-          caption: "```📥 Instagram video downloaded successfully```"
+          caption: "📥 تم تنزيل فيديو إنستغرام بنجاح ✅"
         });
       } else {
-        m.reply("❌ No video found in this Instagram post");
+        m.reply("❌ لا يوجد فيديو في منشور إنستغرام هذا");
       }
     }
   } catch (error) {
