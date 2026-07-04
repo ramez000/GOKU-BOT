@@ -14,7 +14,7 @@ async function handler(m, { conn, bot }) {
     const phoneNumber = m.sender.split('@')[0];
     
     const nextLevelXp = (() => {
-        const levels = [100, 250, 500, 800, 1200, 1700, 2300, 3000, 3800, 4700, 5700, 6800, 8000, 9300, 10700, 12200, 13800, 15500, 17500, 20000];
+        const levels = [100, 250, 500, 800, 1200, 1700, 2300, 3000, 3800, 4700, 5700, 6800, 8000, 9300, 10700, 12800, 14000, 18000, 20000];
         return levels[level] || levels[levels.length - 1];
     })();
     
