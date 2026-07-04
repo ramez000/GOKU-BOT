@@ -3,7 +3,7 @@ async function handler(m, { conn, bot }) {
     const xp = user.xp || 0;
     const level = user.level || 0;
     const nameLevel = user.nameLevel || 'مبتدئ';
-    const cookies = user.cookies || 0;
+    const money = user.money || 0;
     const warnings = user.warnings || 0;
     const banned = user.banned || false;
     const premium = user.premium || false;
@@ -21,27 +21,27 @@ async function handler(m, { conn, bot }) {
     const xpProgress = Math.min(100, Math.floor((xp / nextLevelXp) * 100));
     const status = banned ? '🚫 مـحـظـور' : (premium ? '👑 بـريـمـيـوم' : '🟢 عـادي');
     
-    const profilePic = await conn.profilePictureUrl(m.sender, 'image').catch(() => '');
+    const profilePic = await conn.profilePictureUrl(m.sender, 'image').catch(() => 'https://i.imgur.com/ynstIpQ.jpeg');
     
-    const msg = `╭─┈─┈─┈─⟞🎪⟝─┈─┈─┈─╮
-┃ *🎭 بـروفـايـل ${pushName} 🎪*
-╰─┈─┈─┈─⟞🎭⟝─┈─┈─┈─╯
+    const msg = `╭─┈─┈─┈─⟞🐲⟝─┈─┈─┈─╮
+┃ *📜 بـروفـايـل ${pushName} 📜*
+╰─┈─┈─┈─⟞🐲⟝─┈─┈─┈─╯
 
 ┃ 📱 *الـرقـم:* ${phoneNumber}
 ┃ 🏷️ *الاسـم:* ${pushName}
 ┃ 📝 *الاسـم الـمـسـجـل:* ${name}
 ┃ 📅 *الـعـمـر:* ${age}
-┃ 🎭 *الـرتـبة:* ${nameLevel}
+┃ 🏅 *الـرتـبة:* ${nameLevel}
 ┃ 📊 *الـمـسـتـوى:* ${level}
 ┃ ⭐ *الـنـقـاط:* ${xp} / ${nextLevelXp}
 ┃ 📈 *الـتـقـدم:* [${'⬜'.repeat(Math.floor(xpProgress / 10))}${'⬛'.repeat(10 - Math.floor(xpProgress / 10))}] ${xpProgress}%
-┃ 🍪 *الـفـلوس:* ${money}
+┃ 💰 *الـفـلوس:* ${money}
 ┃ ⚠️ *الـتـحـذيـرات:* ${warnings}
 ┃ 🏷️ *الـحـالـة:* ${status}
 
-╭─┈─┈─┈─⟞🎭⟝─┈─┈─┈─╮
-┃ *اسـتـمـر فـي الـتـفـاعـل لـتـرفـع مـسـتـواك* 🚀
-╰─┈─┈─┈─⟞🤡⟝─┈─┈─┈─╯`;
+╭─┈─┈─┈─⟞🐲⟝─┈─┈─┈─╮
+┃ *𝑰'𝒍𝒍 𝒔𝒉𝒐𝒘 𝒚𝒐𝒖 𝒎𝒚 𝒕𝒓𝒖𝒆 𝒑𝒐𝒘𝒆𝒓!*🥋
+╰─┈─┈─┈─⟞🐲⟝─┈─┈─┈─╯`;
     
     const cfg = bot.config.info;
     await conn.sendMessage(m.chat, {
