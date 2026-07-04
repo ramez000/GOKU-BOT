@@ -6,7 +6,7 @@ let handler = async (m, { conn, text, command }) => {
   if (command === "انمي") {
     // Check if input contains only English letters, numbers, spaces, and symbols
     if (!/^[A-Za-z0-9\s!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/.test(text)) {
-      return m.reply("⚠️ سوري: يرجى كتابة اسم الأنمي بالأحرف الإنجليزية فقط!\nExample: .انمي Naruto");
+      return m.reply("⚠️ عفواً: يرجى كتابة اسم الأنمي بالأحرف الإنجليزية فقط!\nExample: .انمي Naruto");
     }
 
     const se = await Scrapy.Witanime({ query: text, choose: "search" })
@@ -37,8 +37,8 @@ let handler = async (m, { conn, text, command }) => {
       ], 
       mentions: [m.sender],
       newsletter: {
-        name: '𝐕𝐈𝐈7 ~ 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🕷️',
-        jid: '120363225356834044@newsletter'
+        name: '𝐆𝐎𝐊𝐔-𝐁𝐎𝐓 🐉',
+        jid: '120363409497248238@newsletter'
       },
     }, m)
   }
@@ -70,8 +70,8 @@ let handler = async (m, { conn, text, command }) => {
       ],
       mentions: [m.sender],
       newsletter: {
-        name: '𝐕𝐈𝐈7 ~ 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🕷️',
-        jid: '120363225356834044@newsletter'
+        name: '𝐆𝐎𝐊𝐔-𝐁𝐎𝐓 🐉',
+        jid: '120363409497248238@newsletter'
       },
     }, m)
   }
@@ -83,7 +83,7 @@ let handler = async (m, { conn, text, command }) => {
     const anime = await Scrapy.Witanime({ query: id, choose: "id" })
     const episode = anime.data.episodes.find(ep => ep.episode_number == epNum)
     
-    if (!episode) return m.reply("الحلقة غير موجودة")
+    if (!episode) return m.reply("الحلقة غير متوفرة")
     
     const qualitySections = [{
       title: `🎬 ${anime.data.name} - الحلقة ${epNum}`,
@@ -106,8 +106,8 @@ let handler = async (m, { conn, text, command }) => {
       ],
       mentions: [m.sender],
       newsletter: {
-        name: '𝐕𝐈𝐈7 ~ 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🕷️',
-        jid: '120363225356834044@newsletter'
+        name: '𝐆𝐎𝐊𝐔-𝐁𝐎𝐓 🐉',
+        jid: '120363409497248238@newsletter'
       },
     }, m)
   }
@@ -127,8 +127,8 @@ let handler = async (m, { conn, text, command }) => {
   ], 
   mentions: [m.sender],
   newsletter: {
-      name: '𝐕𝐈𝐈7 ~ 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🕷️',
-      jid: '120363225356834044@newsletter'
+      name: '𝐆𝐎𝐊𝐔-𝐁𝐎𝐓 🐉',
+      jid: '120363409497248238@newsletter'
     },
 }, m)
   }
