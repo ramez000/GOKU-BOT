@@ -26,7 +26,7 @@ const handler = async (m, { conn }) => {
     if (!success) {
         const penalty = Math.floor(stealAmount / 2);
         userSender.xp = Math.max(0, (userSender.xp || 0) - penalty);
-        const pic = await conn.profilePictureUrl(m.sender, 'image').catch(() => '');
+        const pic = await conn.profilePictureUrl(m.sender, 'image').catch(() => 'https://i.imgur.com/jGaFb84.jpeg');
         await conn.sendMessage(m.chat, {
             image: { url: pic },
             caption: `╭─┈─┈─⟞🚨⟝─┈─┈─╮
@@ -37,9 +37,9 @@ const handler = async (m, { conn }) => {
 ┃ 😭 تم اكتشافك!
 ┃ 💸 خسرت ${penalty} نقطة
 
-╭─┈─┈─⟞🎪⟝─┈─┈─╮
+╭─┈─┈─⟞🐲⟝─┈─┈─╮
 ┃ *حـاول بـعـد سـاعـة* ⏳
-╰─┈─┈─⟞🤡⟝─┈─┈─╯`,
+╰─┈─┈─⟞🐲⟝─┈─┈─╯`,
             contextInfo: { mentionedJid: [m.sender] }
         }, { quoted: reply_status });
         return;
@@ -49,7 +49,7 @@ const handler = async (m, { conn }) => {
         const available = userTarget.xp;
         userSender.xp = (userSender.xp || 0) + available;
         userTarget.xp = 0;
-        const pic = await conn.profilePictureUrl(m.sender, 'image').catch(() => '');
+        const pic = await conn.profilePictureUrl(m.sender, 'image').catch(() => 'https://i.imgur.com/GmZFp59.jpeg');
         await conn.sendMessage(m.chat, {
             image: { url: pic },
             caption: `╭─┈─┈─⟞💰⟝─┈─┈─╮
@@ -61,9 +61,9 @@ const handler = async (m, { conn }) => {
 ┃ 💰 +${available} نقطة
 ┃ ⚠️ سلبته كل اللي عنده!
 
-╭─┈─┈─⟞🎪⟝─┈─┈─╮
+╭─┈─┈─⟞🐲⟝─┈─┈─╮
 ┃ *اسـتـمـر ولا تـتـوقـف* 🔥
-╰─┈─┈─⟞🤡⟝─┈─┈─╯`,
+╰─┈─┈─⟞🐲⟝─┈─┈─╯`,
             contextInfo: { mentionedJid: [m.sender, target] }
         }, { quoted: reply_status });
         return;
@@ -72,7 +72,7 @@ const handler = async (m, { conn }) => {
     userTarget.xp -= stealAmount;
     userSender.xp = (userSender.xp || 0) + stealAmount;
     
-    const pic = await conn.profilePictureUrl(m.sender, 'image').catch(() => '');
+    const pic = await conn.profilePictureUrl(m.sender, 'image').catch(() => 'https://i.imgur.com/TimIMnf.jpeg');
     await conn.sendMessage(m.chat, {
         image: { url: pic },
         caption: `╭─┈─┈─⟞💰⟝─┈─┈─╮
@@ -83,9 +83,9 @@ const handler = async (m, { conn }) => {
 ┃ سرقت من @${target.split('@')[0]}
 ┃ 💰 +${stealAmount} نقطة
 
-╭─┈─┈─⟞🎪⟝─┈─┈─╮
-┃ *اسـتـمـر ولا تـتـوقـف* 🔥
-╰─┈─┈─⟞🤡⟝─┈─┈─╯`,
+╭─┈─┈─⟞🐲⟝─┈─┈─╮
+┃ *𝙔𝙤𝙪 𝙜𝙤𝙩 𝙩𝙝𝙞𝙨!* 🔥
+╰─┈─┈─⟞🐲⟝─┈─┈─╯`,
         contextInfo: { mentionedJid: [m.sender, target] }
     }, { quoted: reply_status });
 };
