@@ -23,9 +23,9 @@ export default async function before(m, { conn }) {
         { min: 8000, max: 9299, name: 'عملاق' },
         { min: 9300, max: 10699, name: 'فريد' },
         { min: 10700, max: 12199, name: 'سيد النخبة' },
-        { min: 12200, max: 13799, name: 'أسطوري' },
-        { min: 13800, max: 15499, name: 'خارق' },
-        { min: 15500, max: 17499, name: 'سوبر سايان' },
+        { min: 12800, max: 13999, name: 'أسطوري' },
+        { min: 14000, max: 17999, name: 'خارق' },
+        { min: 18000, max: 19999, name: 'سوبر سايان' },
         { min: 20000, max: Infinity, name: '🌀 نخبوي' }
     ];
     
@@ -51,9 +51,9 @@ export default async function before(m, { conn }) {
         user.level = newLevel;
         user.nameLevel = newNameLevel;
         
-        const msg = `╭─┈─┈─┈─⟞🎪⟝─┈─┈─┈─╮
-┃ *🎭 تـرقـيـة فـي الـسـيـرك 🎪*
-╰─┈─┈─┈─⟞🎭⟝─┈─┈─┈─╯
+        const msg = `╭─┈─┈─┈─⟞🐲⟝─┈─┈─┈─╮
+┃ *❄ ترقية تصنيفية ❄*
+╰─┈─┈─┈─⟞🐲⟝─┈─┈─┈─╯
 
 ┃ @${m.sender.split('@')[0]}
 ┃ المستوى السابق: *${oldLevel}*
@@ -62,9 +62,9 @@ export default async function before(m, { conn }) {
 ┃ 🏷️ *لقبك الجديد:*
 ┃ ✦ ${newNameLevel} ✦
 
-╭─┈─┈─┈─⟞🎭⟝─┈─┈─┈─╮
-┃ *العرض لسه مخلصش يا بطل* 🎪
-╰─┈─┈─┈─⟞🤡⟝─┈─┈─┈─╯`;
+╭─┈─┈─┈─⟞🐲⟝─┈─┈─┈─╮
+┃ *𝐊𝐄𝐄𝐏 𝐅𝐈𝐆𝐇𝐓𝐈𝐍𝐆 🥋* 🎪
+╰─┈─┈─┈─⟞🐲⟝─┈─┈─┈─╯`;
         
         await conn.sendMessage(m.chat, {
             text: msg,
