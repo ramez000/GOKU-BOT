@@ -29,19 +29,19 @@ handler.before = async (m, { conn }) => {
         
         const winner = entries[0][0];
         if (global.db?.users[winner]) {
-            global.db.users[winner].xp = (global.db.users[winner].xp || 0) + 500;
-            global.db.users[winner].cookies = (global.db.users[winner].cookies || 0) + 10;
+            global.db.users[winner].xp = (global.db.users[winner].xp || 0) + 400;
+            global.db.users[winner].money = (global.db.users[winner].money || 0) + 10;
         }
         
         await conn.sendMessage(m.chat, { 
-            text: `🏆 *الفائزون في التفكيك*\n\n${sorted.join('\n')}\n\n🏅 @${winner.split('@')[0]} حصل على +500 XP و 🍪 +10 كوكيز`,
+            text: `🏆 *الفائزون في التفكيك*\n\n${sorted.join('\n')}\n\n🏅 @${winner.split('@')[0]} حصل على +400 XP و 💵 +10 فلوس`,
             mentions
         });
         delete global.break.scores[m.chat];
         return;
     }
 
-    await m.reply(`✅ احسنت معاك: ${global.break.scores[m.chat][player]} نقطه`);
+    await m.reply(`✅ احسنت تستاهل: ${global.break.scores[m.chat][player]} نقطة`);
     handler(m, { conn });
 };
 
