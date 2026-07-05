@@ -1,10 +1,10 @@
 import { Scrapy } from "meowsab";
 
 const handler = async (m, { conn, command, text }) => {
-  if (!text) throw '*❲ ❤️ ❳ ~ حط رابط جنب الامر ~ ❲ 💙 ❳ *';
+  if (!text) throw '*❲ ❤️ ❳ ~ ضع رابط مع الأمر ~ ❲ 💙 ❳ *';
   
   if (!text.match(/youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/shorts\//)) {
-    throw '*❌ ~ الرابط مش صحيح ~ حط رابط يوتيوب صحيح*';
+    throw '*❌ ~ الرابط ليس صحيحاً ~ ضع رابط يوتيوب صحيح*';
   }
   
   const isAudio = command === "يوت_اغنيه" || command === "ytmp3";
@@ -13,12 +13,12 @@ const handler = async (m, { conn, command, text }) => {
   if (!res?.status) throw '❌ فشل في جلب البيانات من الرابط';
   
   const type = isAudio ? 'اغـانـي' : 'فيـديـوز';
-  let caption = `*🐞 YouTube | يـوتـيـوب ${type} 🐞*\n\n`;
-  caption += `╭─┈─┈─┈─⟞🍧⟝─┈─┈─┈─╮\n`;
+  let caption = `*YouTube | يـوتـيـوب ${type}*\n\n`;
+  caption += `╭─┈─┈─┈─⟞🐲⟝─┈─┈─┈─╮\n`;
   caption += `*❲ 📽️ ❳ الـعـنـوان:* ${res.title}\n`;
   caption += `*❲ 📢 ❳ الـقـنـاة:* ${res.channel}\n`;
   caption += `*❲ ⏳ ❳ الـجـودة:* ${res.quality}\n`;
-  caption += `╰─┈─┈─┈─⟞🍬⟝─┈─┈─┈─╯\n`;
+  caption += `╰─┈─┈─┈─⟞🐲⟝─┈─┈─┈─╯\n`;
   caption += `> _*❲ ⏱️ ❳ الرجاء الانتظار قليلاً...*_`;
   
   await conn.sendMessage(m.chat, { 
@@ -53,8 +53,8 @@ const handler = async (m, { conn, command, text }) => {
   }, { quoted: m });
 };
 
-handler.usage = ["يوتيوب", "يوت_اغنيه"];
+handler.usage = [*يوتيوب", "يوت_اغنية"];
 handler.category = "downloads";
-handler.command = ['يوت_اغنيه', 'يوتيوب', "ytmp3", "ytmp4"];
+handler.command = ['يوت_اغنية', 'يوتيوب', "ytmp3", "ytmp4"];
 
 export default handler;
