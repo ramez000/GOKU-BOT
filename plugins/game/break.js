@@ -53,7 +53,7 @@ async function handler(m, { conn }) {
         delete global.break.games[m.chat];
     }
 
-    const data = await (await fetch("https://raw.githubusercontent.com/Xov445447533/Xov11111/master/src/JSON/venom-تفكيك.json")).json();
+    const data = await (await fetch("https://raw.githubusercontent.com/ramez000/GOKU-BOT/main/Files/JSON/GOKU_تفكيك.json")).json();
     const q = data[Math.floor(Math.random() * data.length)];
     
     m.reply(`
