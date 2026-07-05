@@ -12,7 +12,7 @@ async function handler(m, { conn }) {
     
     const msg = await conn.sendMessage(m.chat, {
         image: { url: country.img },
-        caption: "🌍 *خمن العلم*\n\nلديك 30 ثانيه لـ الإجابة رد علي الرساله ب اسم العلم"
+        caption: "🌍 *خمن العلم*\n\nلديك 30 ثانية للإجابة رد على الرسالة بإسم العلم"
     });
     
     global.gameActive[m.chat] = {
@@ -23,7 +23,7 @@ async function handler(m, { conn }) {
             if (global.gameActive[m.chat]) {
                 const answer = global.gameActive[m.chat].answer;
                 delete global.gameActive[m.chat];
-                conn.sendMessage(m.chat, { text: `⏰ *أنتهي الوقت* الإجابة هي : *${answer}*` });
+                conn.sendMessage(m.chat, { text: `⏰ *أنتهى الوقت* الإجابة هي : *${answer}*` });
             }
         }, 30000)
     };
@@ -41,18 +41,18 @@ handler.before = async (m, { conn }) => {
         delete global.gameActive[m.chat];
         
         if (global.db?.users[m.sender]) {
-            global.db.users[m.sender].xp = (global.db.users[m.sender].xp || 0) + 100;
-            global.db.users[m.sender].cookies = (global.db.users[m.sender].cookies  || 0) + 2;
+            global.db.users[m.sender].xp = (global.db.users[m.sender].xp || 0) + 150;
+            global.db.users[m.sender].money = (global.db.users[m.sender].money || 0) + 4;
         }
         
         await conn.sendMessage(m.chat, {
             image: { url: game.image },
-            caption: `🎉 *صحيح صحيح* عاش جبت اسم العلم صح *100XP & 2 cookies*\n💡 هل هتعرف تكمل؟\n\n> اكتب *${m.prefix || '.'}علم* عشان تلعب تاني`
+            caption: `🎉 *صحيح صحيح* ممتاز إسم العلم صحيح *150XP & 4 money*\n💡 أكمل باقي الإجابات بشكل صحيح لتفوز باللعبة\n\n> اكتب *${m.prefix || '.'} *اكتب:⦉ .علم ⦊ لتلعب مجدداً`
         });
         return true;
     }
     
-    await m.reply("*❌ إجابة غلط رد جرب تاني*");
+    await m.reply("*❌ إجابة خاطئة حاول مجدداً*");
     return true;
 };
 
