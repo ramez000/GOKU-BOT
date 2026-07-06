@@ -59,7 +59,7 @@ const handler = async (m, { conn, bot, config }) => {
 
   await conn.sendMessage(m.chat, {
     text: msg,
-    contextInfo: context(m.sender, "https://i.pinimg.com/736x/cf/66/94/cf6694258ca9839b43bdaf415c6c56fc.jpg") }, { quoted: reply_status });
+    contextInfo: context(m.sender, "https://i.imgur.com/0avGw4w.jpeg") }, { quoted: reply_status });
 };
 
 handler.command = ["معلومات", "info", "botinfo", "حالة"];
@@ -83,5 +83,3 @@ const context = (jid, img) => ({
         sourceUrl: '',
         mediaType: 1,
         renderLargerThumbnail: true
-    }
-});
