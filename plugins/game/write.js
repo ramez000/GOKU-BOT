@@ -53,7 +53,7 @@ async function handler(m, { conn }) {
         delete global.quiz.games[m.chat];
     }
 
-    const data = await (await fetch("https://raw.githubusercontent.com/Xov445447533/Xov11111/master/src/JSON/venom-كتابه.json")).json();
+    const data = await (await fetch("https://raw.githubusercontent.com/ramez000/GOKU-BOT/main/Files/JSON/GOKU-كتابة.json")).json();
     const q = data[Math.floor(Math.random() * data.length)];
     
     m.reply(`
@@ -76,7 +76,7 @@ async function handler(m, { conn }) {
     };
 }
 
-handler.usage = ["مسابقه"];
-handler.category = "games";
-handler.command = ['مسابقه'];
+handler.usage = ["كتابة"];
+handler.category = "write";
+handler.command = ['كتابة'];
 export default handler;
