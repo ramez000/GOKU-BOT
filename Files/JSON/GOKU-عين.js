@@ -2,7 +2,7 @@
   { "name": "ايرين", "img": "https://i.postimg.cc/fLQMRB7X/31690c0aa442a25d40de77b497d405bf.jpg" },
   { "name": "نيزوكو", "img": "https://i.postimg.cc/VNncpXyN/cf11ef8e938cebd98d3a2ca7b28c299e.jpg" },
   { "name": "سوكونا", "img": "https://i.postimg.cc/kXBzLWKd/2f48a8ff3435e9c34c9804ba21e97b77.jpg" },
-  { "name": "موازن", "img": "https://i.postimg.cc/KzpQ5s93/c3b926606be7eeab49132b78f174525b.jpg" },
+  { "name": "موزان", "img": "https://i.postimg.cc/KzpQ5s93/c3b926606be7eeab49132b78f174525b.jpg" },
   { "name": "كيلوا", "img": "https://i.postimg.cc/9M0YzYWm/c4758da7e93348c56d864b8c4a459dde.jpg" },
   { "name": "غون", "img": "https://i.postimg.cc/fTnqq1zY/80383ca836596d8ad9943e829e8aa9a5.jpg" },
   { "name": "ايتاشي", "img": "https://i.postimg.cc/RCfXtG7h/664cf31bf1bb635a2bf3b0eb1e77e02c.jpg" },
