@@ -6,7 +6,7 @@ async function handler(m, { conn }) {
         delete global.gameActive[m.chat];
     }
     
-    const res = await fetch("https://gist.githubusercontent.com/Kyutaka101/799d5646ceed992bf862026847473852/raw/dcbecff259b1d94615d7c48079ed1396ed42ef67/gistfile1.txt");
+    const res = await fetch("https://raw.githubusercontent.com/ramez000/GOKU-BOT/main/Files/JSON/GOKU-علم.json");
     const data = await res.json();
     const country = data[Math.floor(Math.random() * data.length)];
     
