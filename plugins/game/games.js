@@ -29,19 +29,19 @@ handler.before = async (m, { conn }) => {
         
         const winner = entries[0][0];
         if (global.db?.users[winner]) {
-            global.db.users[winner].xp = (global.db.users[winner].xp || 0) + 500;
-            global.db.users[winner].cookies = (global.db.users[winner].cookies || 0) + 10;
+            global.db.users[winner].xp = (global.db.users[winner].xp || 0) + 450;
+            global.db.users[winner].money = (global.db.users[winner].money || 0) + 10;
         }
         
         await conn.sendMessage(m.chat, { 
-            text: `🏆 *الفائزون*\n\n${sorted.join('\n')}\n\n🏅 @${winner.split('@')[0]} حصل على +500 XP و 🍪 +10 كوكيز`,
+            text: `🏆 *الفائزون*\n\n${sorted.join('\n')}\n\n🏅 @${winner.split('@')[0]} حصل على +450 XP و 💵 +10 فلوس`,
             mentions
         });
         delete global.quiz.scores[m.chat];
         return;
     }
 
-    await m.reply(`✅ احسنت معاك: ${global.quiz.scores[m.chat][player]} نقطه`);
+    await m.reply(`✅ احسنت تستاهل: ${global.quiz.scores[m.chat][player]} نقطة`);
     handler(m, { conn });
 };
 
@@ -57,10 +57,10 @@ async function handler(m, { conn }) {
     const q = data[Math.floor(Math.random() * data.length)];
     
     m.reply(`
-╭─┈─┈─┈─⟞🍧⟝─┈─┈─┈─╮
+╭─┈─┈─┈─⟞🖊⟝─┈─┈─┈─╮
 ┃ *⌯︙ ${q.question}*
-╰─┈─┈─┈─⟞🍬⟝─┈─┈─┈─╯
-> _*اكتب الكلام بسرعه عشان تتحسبلك نقطه + بعد ٣٠ ثانيه لو مردتش اللعبه هتنتهي*_`);
+╰─┈─┈─┈─⟞📝⟝─┈─┈─┈─╯
+> *أكتب نفس الكلمة بسرعة قبل إنتهاء الوقت*`);
     
     if (!global.quiz.scores[m.chat]) global.quiz.scores[m.chat] = {};
     
