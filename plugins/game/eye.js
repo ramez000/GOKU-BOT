@@ -58,7 +58,7 @@ const handler = async (m, { conn }) => {
   const g2 = global.gameEye[chatId];
   g2.round++;
   
-  const data = await fetch("https://raw.githubusercontent.com/fjfilhfjjg-boop/Pomni-AI/refs/heads/main/%D8%B9%D9%8A%D9%86.md").then(r => r.json());
+  const data = await fetch("https://raw.githubusercontent.com/ramez000/GOKU-BOT/main/Files/JSON/GOKU-عين.json").then(r => r.json());
   const char = data[Math.floor(Math.random() * data.length)];
   
   const wrong = shuffle([...NAMES]).filter(n => n !== char.name).slice(0, 3);
