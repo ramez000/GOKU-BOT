@@ -21,6 +21,6 @@ const handler = async (m, { conn, text }) => {
 
 handler.usage = ["فيديو", "اغنية", "شغل"];
 handler.category = "downloads";
-handler.command = ["اغنيه", "فيديو", "اغنية", "play", "video"];
+handler.command = ["اغنية", "فيديو", "اغنية", "play", "video"];
 
 export default handler;
