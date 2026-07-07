@@ -14,7 +14,7 @@ const toimg = async (m, { conn }) => {
   }
 };
 
-toimg.usage = ["لصوره"];
+toimg.usage = ["لصورة"];
 toimg.category = "tools";
-toimg.command = ["لصوره", "toimage", "toimg"];
+toimg.command = ["لصورة", "toimage", "toimg"];
 export default toimg;
