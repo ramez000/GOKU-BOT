@@ -94,7 +94,7 @@ if (section === "owner") {
 }
 
 // ===== 5 -  الأدوات =====
-if (section === "sticker") {
+if (section === "tools") {
     await sendSection(m, conn, `
 ╭━━━━━━━━━━━━━━━╮
 ┃ 🛠 *قسم الأدوات*
