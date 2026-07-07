@@ -36,7 +36,7 @@ if (data && data.length > 0) {
   }
 }
 
-test.category = "download";
+test.category = "downloads";
 test.usage = ["بحث_تيك"];
 test.command = ["بحث_تيك"];
 export default test;
