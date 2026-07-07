@@ -1,22 +1,14 @@
 const CATEGORIES = [
-    [1, 'التـحـمـيـل', 'downloads', '📂'],
-    [2, 'الـمـجـمـوعـات', 'group', '🐞'],
-    [3, 'الـمـلـصـقـات', 'sticker', '🌄'],
-    [4, 'الـمـطـوريـن', 'owner', '🇩🇪'],
-    [5, 'امـثـلـه', 'example', '✳️'],
-    [6, 'الـادوات', 'tools', '🚀'],
-    [7, 'الـبـحـث', 'search', '🌐'],
-    [8, 'الادمــن', 'admin', '👨🏻‍⚖️'],
-    [9, 'الالــعـاب', 'games', '🎮'],
-    [10, 'الچيف', 'gif', '✴️'],
-    [11, 'الـبــنـك', 'bank', '💰'],
-    [12, 'الـذكـاء الاصـطـنـاعـي', 'ai', '🤖'],
-    [13, 'الـبـوتـات الـفـرعـي', 'sub', '♥️'],
-    [14, 'مـعـلومـات الـبـوت', 'info', '🗃️'],
-    [15, 'الـالــقــاب', 'nicknames', '🫯'],
-    [16, 'الـلـوجـوهــات', 'logos', '🎡'],
-    [17, 'تـغـيـر الاصـوات', 'voices', '📢'],
-    [18, 'أخــرى', 'other', '🌹']
+    [1, '*قـسـم الــتــحــمــيــل*', 'downloads', '📥'],
+    [2, '*قـسـم الــمــجــمــوعــات*', 'group', '👥'],
+    [3, '*قـسـم الــمــلــصــقــات*', 'sticker', '💌'],
+    [4, '*قـسـم الــمــطــوريــن*', 'owner', '👨‍💻'],
+    [5, '*قـسـم الأدوات*', 'tools', '🛠'],
+    [6, '*قـسـم المشرفين*', 'admin', '👨🏻‍⚖️'],
+    [7, '*قـسـم الألــعــاب*', 'games', '🎮'],
+    [8, '*قـسـم الــبــنــك*', 'bank', '💰'],
+    [9, '*قـسـم الـبـوتـات الــفــرعــي*', 'sub', '🤖'],
+    [10, '*مــعــلــومــات الــبــوت*', 'info', '📑'],
 ];
 
 const getCat = n => CATEGORIES.find(c => c[0] === n);
@@ -31,13 +23,13 @@ const context = (jid, img) => ({
     isForwarded: true,
     forwardingScore: 1,
     forwardedNewsletterMessageInfo: {
-        newsletterJid: '120363225356834044@newsletter',
-        newsletterName: '𝐕𝐈𝐈7 ~ 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🕷️',
+        newsletterJid: '120363409497248238@newsletter',
+        newsletterName: '𝐆𝐎𝐊𝐔-𝐁𝐎𝐓 🐉',
         serverMessageId: 0
     },
     externalAdReply: {
-        title: "𝐏𝐎𝐌𝐍𝐈-𝐀𝐈 🎪 | 𝐁𝐨𝐭 𝐢𝐬 𝐛𝐮𝐢𝐥𝐭 𝐨𝐧 𝐭𝐡𝐞 𝐖𝐒/𝐕𝐈𝐈 𝐟𝐫𝐚𝐦𝐞𝐰𝐨𝐫𝐤",
-        body: "𝚆𝚑𝚊𝚝𝚜𝙰𝚙𝚙 𝚋𝚘𝚝 𝚝𝚑𝚊𝚝 𝚒𝚜 𝚎𝚊𝚜𝚢 𝚝𝚘 𝚖𝚘𝚍𝚒𝚏𝚢 𝚊𝚗𝚍 𝚟𝚎𝚛𝚢 𝚏𝚊𝚜𝚝",
+        title: "",
+        body: "",
         thumbnailUrl: img,
         sourceUrl: '',
         mediaType: 1,
@@ -58,39 +50,39 @@ const uptimeFormatted = `${String(hours).padStart(2, '0')}:${String(minutes).pad
     
     if (!selected && !args[0]) {
         const sections = [{
-            title: "🌳 ~ الاقـسـام ~ 🪾",
+            title: "",
             rows: CATEGORIES.map(c => ({
                 title: `${c[0]} ~ ${c[1]} ${c[3]}`,
-                description: `اضغط لعرض أوامر قسم ${c[1]}`,
+                description: `${c[1]}`,
                 id: `.${command} ${c[0]}`
             }))
         }];
 
         const menuText = `
-رَبَّنَا اغْفِرْ لَنَا وَلِإِخْوَانِنَا الَّذِينَ سَبَقُونَا بِالْإِيمَانِ
-وَلَا تَجْعَلْ فِي قُلُوبِنَا غِلًّا لِّلَّذِينَ آمَنُوا رَبَّنَا إِنَّكَ رَءُوفٌ رَّحِيمٌ
-╭─┈─┈─┈─⟞🎪⟝─┈─┈─┈─╮
-┃ ⌯🍂︙ اهـلا → *[ @${m.sender.split("@")[0]} ]*
+> *رَبَّنَا اغفِر لَنا وَلِإِخوانِنَا الَّذينَ سَبَقونا بِالإيمانِ وَلا تَجعَل في قُلوبِنا غِلًّا لِلَّذينَ آمَنوا رَبَّنا إِنَّكَ رَءوفٌ رَحيمٌ*
+
+╭─┈─┈─┈─⟞🐲⟝─┈─┈─┈─╮
+┃ ⌯👋︙ اهـلاً → *[ @${m.sender.split("@")[0]} ]*
 ┃ ⌯🚀︙ الـتشـغـيـل → ${uptimeFormatted}
 ┃ ⌯👾︙ الـتـاريـخ → ${date} - ${time}
 ╰─┈─┈─┈─⟞🎪⟝─┈─┈─┈─╯
-> *_اختار قسم من القائمة عشان يبعتلك اوامر القسم_*`;
+> 💬 *رد على هذه الرسالة برقم القسم الذي تريده لعرض أوامره*`;
         
         await conn.sendButtonNormal(m.chat, {
-            media: { url: "https://i.pinimg.com/originals/e2/21/20/e221203f319df949ee65585a657501a2.jpg" },
+            media: { url: "https://i.imgur.com/clDbZ1w.jpeg" },
             mediaType: 'image',
             caption: menuText,
             buttons: [{
                 name: "single_select",
                 params: {
-                    title: "🍂✨",
+                    title: "",
                     sections: sections
                 }
             }],
             mentions: [m.sender],
             newsletter: {
-                name: '𝐕𝐈𝐈7 ~ 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🕷️',
-                jid: '120363225356834044@newsletter'
+                name: '𝐆𝐎𝐊𝐔-𝐁𝐎𝐓 🐉',
+                jid: '120363409497248238@newsletter'
             }
         }, global.reply_status);
         return;
@@ -106,7 +98,7 @@ const uptimeFormatted = `${String(hours).padStart(2, '0')}:${String(minutes).pad
     const categoryCmds = cmds.filter(c => c.category === cat[2]);
     
     if (!categoryCmds.length) {
-        await conn.sendMessage(m.chat, { text: '*❌ القسم فاضي*', contextInfo: context(m.sender, getImg(bot)) }, { quoted: m });
+        await conn.sendMessage(m.chat, { text: '*❌ القسم فارغ*', contextInfo: context(m.sender, getImg(bot)) }, { quoted: m });
         return;
     }
 
@@ -120,7 +112,7 @@ const uptimeFormatted = `${String(hours).padStart(2, '0')}:${String(minutes).pad
 ${cmdsList}
 
 ╭─┈─┈─┈─⟞${cat[3]}⟝─┈─┈─┈─╮
-┃ *⌯︙𝐕𝐈𝐈7 ~ ${bot?.config?.info?.nameBot || 'POMNI-AI'}*
+┃ *⌯︙RAMEZ ~ ${bot?.config?.info?.nameBot || 'POMNI-AI'}*
 ╰─┈─┈─┈─⟞${cat[3]}⟝─┈─┈─┈─╯
 > *رَبَّنَا اغْفِرْ لَنَا وَلِإِخْوَانِنَا*`.trim(), contextInfo: context(m.sender, getImg(bot)) }, { quoted: m });
 }
