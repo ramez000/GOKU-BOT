@@ -6,7 +6,7 @@ const res = (await bot.errors()).map(x => `\n
 ==============`).join(" ")
 m.reply(res)
 }
-run.command = ["الأخطاء"]
+run.command = ["الأخطاء","الاخطاء"]
 run.usage = ["الأخطاء"];
 run.category = "owner";
 run.owner = true;
