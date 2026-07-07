@@ -53,7 +53,7 @@ const handler = async (m, { conn, command, text }) => {
   }, { quoted: m });
 };
 
-handler.usage = [*يوتيوب", "يوت_اغنية"];
+handler.usage = [*"يوتيوب", "يوت_اغنية"];
 handler.category = "downloads";
 handler.command = ['يوت_اغنية', 'يوتيوب', "ytmp3", "ytmp4"];
 
