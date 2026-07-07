@@ -1,7 +1,7 @@
 const toimg = async (m, { conn }) => {
   try {
     if (!m.quoted) {
-      return m.reply("~ رد على صوره");
+      return m.reply("~ رد على صورة");
     }
 
     const buffer = await m.quoted.download();
