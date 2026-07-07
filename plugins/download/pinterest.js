@@ -43,7 +43,7 @@ async function test(m, { conn, bot, text }) {
   }
 }
 
-test.category = "search";
+test.category = "download";
 test.usage = ["بينترست"];
 test.command = ["بين", "بينترست", "pinterest"];
 export default test;
